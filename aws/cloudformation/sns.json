@@ -1,0 +1,27 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "Creating Initial IAM",
+    "Resources": {
+        "DevopsSns": {
+            "Type" : "AWS::SNS::Topic",
+            "Properties" : {
+                "DisplayName": "ultimate-japan-guider-alarm",
+                "Subscription" : [
+                    {
+                        "Endpoint": "zhangyiding1995@gmail.com",
+                        "Protocol": "email"
+                    },
+                    {
+                        "Endpoint": "william.zhen.yan@gmail.com",
+                        "Protocol": "email"
+                    },
+                    {
+                        "Endpoint": "mfmm1565@gmail.com",
+                        "Protocol": "email"
+                    }
+                ],
+                "TopicName": "ultimate-japan-guider-alarm"
+            }
+        }    
+    }
+ }  
